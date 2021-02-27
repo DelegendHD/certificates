@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600&display=swap" rel="stylesheet">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            
+        }
+        body{
+            background-color: white;
+        }
+        /*header part*/
+        #Header{
+            width: 100%;
+            height: 100px;
+            background-image: linear-gradient(to right,rgb(194, 186, 186),white);
+            border: 0px solid white;
+            float:right;
+        }
+        #Logo-container{
+            height: 100%;
+            width: 30%;
+            float: right;
+        }
+        #LC-img{
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            
+        }
+        #LC-h1{
+            float: left;
+            line-height: 100px;
+            padding: 0 20px;
+        }
+
+        /*nav bar part*/
+        nav{
+            width: 70%;
+            text-align: center;
+            float: left;
+        }
+        nav ul{
+            list-style-type: none;
+            padding: 0px;
+            margin: 0px;
+        }
+        nav a{
+            text-decoration: none;
+            display: block;
+            color: black;
+            transition: 0.2s;
+            transition-timing-function: ease-in-out;
+            font-weight: bold;
+        }
+        nav li{
+            margin: 0;
+            display: inline-block;
+            line-height: 100px;
+            width: 100px;
+            
+        }
+        nav li a:hover{
+            background-color: white;
+        }
+        /*main-animation*/
+        main{
+            width: 100%;
+            height: 500px;
+            background-color: rgb(75, 69, 69);
+            border-top: 3px solid white;
+            /*clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);*/
+            animation-name: main-animationPart;
+            animation-duration: 5s;
+            animation-timing-function: linear;
+            animation-iteration-count: 10000000000000000000;
+        }
+        @keyframes main-animationPart {
+            0%{
+                background-color: white;
+            }
+            50%{
+                background-color: lawngreen;
+            }
+            100%{
+                background-color: cyan;
+            }
+        }
+        /*aside part*/
+        aside{
+            width: 25%;
+            height: 100%;
+            background-color: white;
+            text-align: center;
+            float: left;
+        }
+        aside img{
+            width: 30%;
+            height: 200px;
+        }
+        aside h1{
+            padding: 31.5px 0;
+            border-bottom: 2px solid blue;
+        }
+        /*content part*/
+        #article{
+            width: 75%;
+            height: 500px;
+            float: right;
+            position: relative;
+        }
+        #article-box{
+            width: 400px;
+            height: 200px;
+            background-color: rgb(214, 65, 170);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            text-align: center;
+            font-family: 'Cairo', sans-serif;
+            padding: 20px;
+        }
+        #article-box h1{
+            padding: 20px 0;
+            border-bottom: 2px solid rgb(136, 231, 124);
+        }
+        /*social media buttons*/
+        #aside-soc-media{
+            margin-top: 10px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        #aside-soc-media img{
+            height: 70px;
+            width: 70px;
+            padding-bottom: 10px;
+            border-bottom: 2px blue solid;
+            transition: 0.3s;
+            transition-timing-function: ease-in-out;
+        }
+        #aside-soc-media img:hover{
+            margin-top: 10px;
+            width: 75px;
+            border-bottom: 2px black solid;
+        }
+        @media only screen and (min-width: 1077px){
+            #aside-soc-media img {
+                height: 50px;
+                width: 50px;
+            }
+            #aside-soc-media img:hover{
+                width: 55px;
+            }
+        }
+        @media only screen and (min-width: 579px) and (max-width: 1076px){
+            #Header{
+                height: auto;
+            }
+            #Logo-container{
+                text-align: center;
+                width: 100%;
+            }
+            nav{
+                width: 100%;
+            }
+            #LC-h1{
+                float: none;
+            }
+            main{
+                float: left;
+                height: 397px;
+            }
+            #article{
+                height: 100%;
+                width: 60%;
+                position: relative;
+                float: right;
+            }
+            aside{
+                width: 40%;
+                float: left;
+            }
+            #article-box{
+                position: absolute;
+                width: 50%;
+                height: 25%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                text-align: center;
+                font-family: 'Cairo', sans-serif;
+            }
+            #aside-soc-media img {
+                height: 50px;
+                width: 50px;
+            }
+            #aside-soc-media img:hover{
+                width: 55px;
+            }
+        }
+        @media only screen and (min-width: 200px) and (max-width: 578px){
+            #Header{
+                height: auto;
+                text-align: center;
+                justify-content: center;
+            }
+            #Logo-container{
+                width: 100%;
+                float: right;
+                }
+            /*#LC-img{
+                height: 50px;
+                width: 50px;
+            }*/
+            nav{
+                text-align: center;
+                width: 100%;
+                float: left;
+            }
+            #LC-h1{
+                float: none;
+            }
+            main{
+                height: auto;
+                float: left;
+            }
+            #article{
+                position: relative;
+                width: 100%;
+                float: right;
+            }
+            aside{
+                float: left;
+                width: 100%;
+            }
+            #article-box{
+                width: 50%;
+                height: 25%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                text-align: center;
+                font-family: 'Cairo', sans-serif;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!--header part-->
+    <header id="Header">
+        <span id="Logo-container">
+            <h1 id="LC-h1">Hasan jehjah</h1>
+            <img src="img.jfif" alt="" id="LC-img">
+        </span>
+        <!--nav bar part-->
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About us</a></li>
+                <li><a href="">Contact us</a></li>
+                <li><a href="">Feed back</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--main part<animation>-->
+    <main>
+        <!--aside part-->
+        <aside>
+            <img src="img.jfif" alt="">
+            <h1>IT is great</h1>
+            <div id="aside-soc-media">
+                <a href=""><img src="sm.png" alt=""></a>
+                <a href=""><img src="sm1.png" alt=""></a>
+                <a href=""><img src="sm2.png" alt=""></a>
+                <a href=""><img src="sm3.png" alt=""></a>
+            </div>
+        </aside>
+        <article id="article">
+            <div id="article-box">
+                <h1>حسن جحجاح</h1>
+                <p>انا مصمم ويب</p>
+            </div>
+        </article>
+    </main>
+</body>
+</html>
